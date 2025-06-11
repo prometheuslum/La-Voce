@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>La Voce</title>
+  <style>
+    body {
+      margin: 0; padding: 0;
+      background: radial-gradient(circle at center, #000 60%, #111 100%);
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    .symbol {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+      animation: pulse 2s infinite;
+    }
+    button {
+      background: none;
+      color: white;
+      border: 2px solid white;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="symbol">🌒⧫☼</div>
+  <button onclick="document.getElementById('audio').play()">Ascolta</button>
+  <audio id="audio" src="voce-lumen.mp3"></audio>
+</body>
+</html>
